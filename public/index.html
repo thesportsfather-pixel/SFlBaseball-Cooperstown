@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    SFL Baseball | Road to Cooperstown
+  </title>
+
+  <meta
+    name="description"
+    content="Support SFL Baseball on the Road to Cooperstown."
+  />
+
+  <style>
+
+    :root {
+
+      --bg:
+        #03050a;
+
+      --bg2:
+        #070b12;
+
+      --panel:
+        #0b111c;
+
+      --panel2:
+        #111a29;
+
+      --blue:
+        #155cff;
+
+      --blue-light:
+        #4e8cff;
+
+      --silver:
+        #dce1e8;
+
+      --silver-dark:
+        #9fa8b5;
+
+      --white:
+        #ffffff;
+
+      --muted:
+        #a9b2c0;
+
+      --danger:
+        #ff6171;
+
+      --success:
+        #36df98;
+
+      --border:
+        rgba(
+          55,
+          110,
+          255,
+          0.42
+        );
+
+    }
+
+
+    * {
+
+      box-sizing:
+        border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior:
+        smooth;
+
+    }
+
+
+    body {
+
+      margin:
+        0;
+
+      min-height:
+        100vh;
+
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color:
+        white;
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            25,
+            84,
+            255,
+            0.18
+          ),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(
+            255,
+            255,
+            255,
+            0.05
+          ),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          180deg,
+          #070b12 0%,
+          #020307 100%
+        );
+
+    }
+
+
+    a {
+
+      color:
+        inherit;
+
+      text-decoration:
+        none;
+
+    }
+
+
+    button,
+    input {
+
+      font:
+        inherit;
+
+    }
+
+
+    button {
+
+      cursor:
+        pointer;
+
+    }
+
+
+    .page-shell {
+
+      width:
+        min(
+          1180px,
+          94%
+        );
+
+      margin:
+        0 auto;
+
+      padding:
+        34px
+        0
+        80px;
+
+    }
+
+
+    /* HERO */
+
+
+    .hero {
+
+      text-align:
+        center;
+
+      margin-bottom:
+        34px;
+
+    }
+
+
+    .team-logo {
+
+      display:
+        block;
+
+      width:
+        min(
+          450px,
+          88vw
+        );
+
+      max-height:
+        280px;
+
+      object-fit:
+        contain;
+
+      margin:
+        0 auto 24px;
+
+      filter:
+        drop-shadow(
+          0 0 22px
+          rgba(
+            34,
+            94,
+            255,
+            0.28
+          )
+        );
+
+    }
+
+
+    .team-kicker {
+
+      margin-bottom:
+        12px;
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        13px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.24em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .hero-title {
+
+      margin:
+        0;
+
+      font-size:
+        clamp(
+          52px,
+          9vw,
+          108px
+        );
+
+      line-height:
+        0.82;
+
+      font-weight:
+        1000;
+
+      font-style:
+        italic;
+
+      letter-spacing:
+        -0.045em;
+
+      text-transform:
+        uppercase;
+
+      text-shadow:
+
+        4px 4px 0
+        #0a1830,
+
+        7px 7px 0
+        rgba(
+          21,
+          92,
+          255,
+          0.24
+        );
+
+    }
+
+
+    .hero-title .road {
+
+      display:
+        block;
+
+      color:
+        var(--white);
+
+    }
+
+
+    .hero-title .coop {
+
+      display:
+        block;
+
+      margin-top:
+        12px;
+
+      color:
+        var(--blue-light);
+
+    }
+
+
+    .hero-subtitle {
+
+      width:
+        min(
+          760px,
+          95%
+        );
+
+      margin:
+        30px auto 0;
+
+      color:
+        var(--silver);
+
+      font-size:
+        16px;
+
+      line-height:
+        1.65;
+
+    }
+
+
+    /* PLAYER SECTION */
+
+
+    .choose-section {
+
+      margin-top:
+        45px;
+
+    }
+
+
+    .choose-title {
+
+      margin:
+        0;
+
+      text-align:
+        center;
+
+      color:
+        white;
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          48px
+        );
+
+      font-style:
+        italic;
+
+      font-weight:
+        1000;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .choose-subtitle {
+
+      margin:
+        10px
+        0
+        26px;
+
+      text-align:
+        center;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+    }
+
+
+    .player-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(
+            0,
+            1fr
+          )
+        );
+
+      gap:
+        16px;
+
+    }
+
+
+    .player-card {
+
+      min-height:
+        104px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        16px;
+
+      padding:
+        18px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        16px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(
+            17,
+            26,
+            41,
+            0.97
+          ),
+          rgba(
+            4,
+            8,
+            15,
+            0.98
+          )
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(
+          0,
+          0,
+          0,
+          0.30
+        );
+
+      transition:
+        0.16s ease;
+
+    }
+
+
+    .player-card:hover {
+
+      transform:
+        translateY(
+          -3px
+        );
+
+      border-color:
+        var(--blue-light);
+
+      box-shadow:
+        0 16px 34px
+        rgba(
+          0,
+          0,
+          0,
+          0.40
+        );
+
+    }
+
+
+    .number {
+
+      flex:
+        0 0 58px;
+
+      width:
+        58px;
+
+      height:
+        58px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border-radius:
+        50%;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #c8ced7
+        );
+
+      color:
+        #06101e;
+
+      border:
+        3px solid
+        var(--blue-light);
+
+      font-size:
+        21px;
+
+      font-weight:
+        1000;
+
+      box-shadow:
+        0 4px 16px
+        rgba(
+          35,
+          95,
+          255,
+          0.20
+        );
+
+    }
+
+
+    .player-info {
+
+      min-width:
+        0;
+
+    }
+
+
+    .player-name {
+
+      display:
+        block;
+
+      color:
+        white;
+
+      font-size:
+        18px;
+
+      font-weight:
+        900;
+
+    }
+
+
+    .support-text {
+
+      display:
+        block;
+
+      margin-top:
+        7px;
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        11px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .arrow {
+
+      margin-left:
+        auto;
+
+      padding-left:
+        10px;
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        25px;
+
+      font-weight:
+        900;
+
+    }
+
+
+    /* GENERAL DONATION */
+
+
+    .general-donation {
+
+      margin-top:
+        50px;
+
+      padding:
+        34px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        22px;
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            34,
+            91,
+            255,
+            0.10
+          ),
+          transparent 55%
+        ),
+
+        linear-gradient(
+          145deg,
+          rgba(
+            16,
+            26,
+            43,
+            0.96
+          ),
+          rgba(
+            4,
+            8,
+            15,
+            0.98
+          )
+        );
+
+      box-shadow:
+        0 18px 50px
+        rgba(
+          0,
+          0,
+          0,
+          0.30
+        );
+
+    }
+
+
+    .general-kicker {
+
+      text-align:
+        center;
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.18em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .general-title {
+
+      margin:
+        8px
+        0
+        10px;
+
+      text-align:
+        center;
+
+      color:
+        white;
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          44px
+        );
+
+      font-style:
+        italic;
+
+      font-weight:
+        1000;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .general-description {
+
+      max-width:
+        690px;
+
+      margin:
+        0 auto 25px;
+
+      text-align:
+        center;
+
+      color:
+        var(--silver);
+
+      line-height:
+        1.6;
+
+    }
+
+
+    .general-form {
+
+      width:
+        min(
+          620px,
+          100%
+        );
+
+      margin:
+        0 auto;
+
+    }
+
+
+    .general-field {
+
+      margin-bottom:
+        16px;
+
+    }
+
+
+    .general-field label {
+
+      display:
+        block;
+
+      margin-bottom:
+        8px;
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .general-field input {
+
+      width:
+        100%;
+
+      min-height:
+        51px;
+
+      padding:
+        13px 15px;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.18
+        );
+
+      border-radius:
+        11px;
+
+      outline:
+        none;
+
+      background:
+        #080d16;
+
+      color:
+        white;
+
+      font-size:
+        16px;
+
+    }
+
+
+    .general-field input:focus {
+
+      border-color:
+        var(--blue-light);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          34,
+          91,
+          255,
+          0.08
+        );
+
+    }
+
+
+    .amount-wrap {
+
+      position:
+        relative;
+
+    }
+
+
+    .amount-symbol {
+
+      position:
+        absolute;
+
+      left:
+        15px;
+
+      top:
+        50%;
+
+      transform:
+        translateY(
+          -50%
+        );
+
+      color:
+        var(--blue-light);
+
+      font-size:
+        19px;
+
+      font-weight:
+        900;
+
+    }
+
+
+    .amount-wrap input {
+
+      padding-left:
+        35px;
+
+    }
+
+
+    .anonymous-option {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin:
+        8px
+        0
+        20px;
+
+      color:
+        var(--silver);
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+    }
+
+
+    .anonymous-option input {
+
+      width:
+        18px;
+
+      height:
+        18px;
+
+      accent-color:
+        var(--blue);
+
+    }
+
+
+    .general-button {
+
+      width:
+        100%;
+
+      min-height:
+        52px;
+
+      border:
+        0;
+
+      border-radius:
+        999px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #dfe4eb,
+          var(--blue-light)
+        );
+
+      color:
+        #050b15;
+
+      font-size:
+        15px;
+
+      font-weight:
+        1000;
+
+      text-transform:
+        uppercase;
+
+      cursor:
+        pointer;
+
+    }
+
+
+    .general-button:hover {
+
+      transform:
+        translateY(
+          -1px
+        );
+
+    }
+
+
+    .general-button:disabled {
+
+      opacity:
+        0.5;
+
+      cursor:
+        not-allowed;
+
+    }
+
+
+    .general-note {
+
+      margin:
+        16px
+        0
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.5;
+
+      text-align:
+        center;
+
+    }
+
+
+    .general-status {
+
+      display:
+        none;
+
+      margin-top:
+        15px;
+
+      padding:
+        12px 14px;
+
+      border-radius:
+        10px;
+
+      text-align:
+        center;
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+    }
+
+
+    .general-status.error {
+
+      display:
+        block;
+
+      color:
+        #ffb5b8;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          80,
+          90,
+          0.45
+        );
+
+      background:
+        rgba(
+          255,
+          80,
+          90,
+          0.1
+        );
+
+    }
+
+
+    .general-status.success {
+
+      display:
+        block;
+
+      color:
+        #a7f3c0;
+
+      border:
+        1px solid
+        rgba(
+          34,
+          197,
+          94,
+          0.4
+        );
+
+      background:
+        rgba(
+          34,
+          197,
+          94,
+          0.1
+        );
+
+    }
+
+
+    .footer {
+
+      margin-top:
+        48px;
+
+      text-align:
+        center;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+
+      line-height:
+        1.7;
+
+    }
+
+
+    .footer strong {
+
+      color:
+        white;
+
+    }
+
+
+    @media (
+      max-width:
+      800px
+    ) {
+
+      .player-grid {
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(
+              0,
+              1fr
+            )
+          );
+
+      }
+
+    }
+
+
+    @media (
+      max-width:
+      560px
+    ) {
+
+      .page-shell {
+
+        width:
+          94%;
+
+        padding-top:
+          20px;
+
+      }
+
+
+      .team-logo {
+
+        width:
+          min(
+            350px,
+            88vw
+          );
+
+      }
+
+
+      .player-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          12px;
+
+      }
+
+
+      .player-card {
+
+        min-height:
+          90px;
+
+      }
+
+
+      .number {
+
+        width:
+          56px;
+
+        height:
+          56px;
+
+        font-size:
+          21px;
+
+      }
+
+
+      .player-name {
+
+        font-size:
+          17px;
+
+      }
+
+
+      .general-donation {
+
+        margin-top:
+          40px;
+
+        padding:
+          25px
+          17px;
+
+        border-radius:
+          18px;
+
+      }
+
+
+      .general-title {
+
+        font-size:
+          27px;
+
+      }
+
+
+      .general-description {
+
+        font-size:
+          14px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="page-shell">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="/sfl-baseball-logo.png"
+        alt="SFL Baseball"
+        class="team-logo"
+      />
+
+
+      <div class="team-kicker">
+        SOUTH FLORIDA BASEBALL
+      </div>
+
+
+      <h1 class="hero-title">
+
+        <span class="road">
+          Road to
+        </span>
+
+        <span class="coop">
+          Cooperstown
+        </span>
+
+      </h1>
+
+
+      <p class="hero-subtitle">
+
+        Help SFL Baseball make the Cooperstown dream
+        a reality. Choose the player you would like to
+        support and sponsor one or more baseballs.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- PLAYER LIST -->
+
+    <section class="choose-section">
+
+      <h2 class="choose-title">
+        Choose Your Player
+      </h2>
+
+
+      <p class="choose-subtitle">
+        Select a player below to visit their fundraiser.
+      </p>
+
+
+      <div class="player-grid">
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=tanner-billesdon"
+        >
+
+          <span class="number">
+            #2
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Tanner Billesdon
+            </span>
+
+            <span class="support-text">
+              Support Tanner
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=ian-camacho"
+        >
+
+          <span class="number">
+            #3
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Ian Camacho
+            </span>
+
+            <span class="support-text">
+              Support Ian
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=valentino-latorre"
+        >
+
+          <span class="number">
+            #5
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Valentino Latorre
+            </span>
+
+            <span class="support-text">
+              Support Valentino
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=logan-eisen"
+        >
+
+          <span class="number">
+            #10
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Logan Eisen
+            </span>
+
+            <span class="support-text">
+              Support Logan
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=caleb-mulligan"
+        >
+
+          <span class="number">
+            #12
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Caleb Mulligan
+            </span>
+
+            <span class="support-text">
+              Support Caleb
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=lucas-fernandez"
+        >
+
+          <span class="number">
+            #13
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Lucas Fernandez
+            </span>
+
+            <span class="support-text">
+              Support Lucas
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=andrew-porter"
+        >
+
+          <span class="number">
+            #21
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Andrew Porter
+            </span>
+
+            <span class="support-text">
+              Support Andrew
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=jake-smith"
+        >
+
+          <span class="number">
+            #22
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Jake Smith
+            </span>
+
+            <span class="support-text">
+              Support Jake
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=bryce-luna"
+        >
+
+          <span class="number">
+            #30
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Bryce Luna
+            </span>
+
+            <span class="support-text">
+              Support Bryce
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- GENERAL TEAM DONATION -->
+
+    <section class="general-donation">
+
+      <div class="general-kicker">
+        Support the Entire Team
+      </div>
+
+
+      <h2 class="general-title">
+        General Team Donation
+      </h2>
+
+
+      <p class="general-description">
+
+        Want to support SFL Baseball without selecting
+        a player or purchasing a baseball? Enter any custom
+        donation amount below.
+
+      </p>
+
+
+      <div class="general-form">
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonationAmount"
+          >
+            Donation Amount
+          </label>
+
+
+          <div class="amount-wrap">
+
+            <span class="amount-symbol">
+              $
+            </span>
+
+            <input
+              id="generalDonationAmount"
+              type="number"
+              min="1"
+              step="0.01"
+              inputmode="decimal"
+              placeholder="100.00"
+            />
+
+          </div>
+
+        </div>
+
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonorName"
+          >
+            Donor Name
+          </label>
+
+          <input
+            id="generalDonorName"
+            type="text"
+            maxlength="50"
+            autocomplete="name"
+            placeholder="Example: The Smith Family"
+          />
+
+        </div>
+
+
+
+        <label class="anonymous-option">
+
+          <input
+            id="generalAnonymous"
+            type="checkbox"
+          />
+
+          <span>
+            Remain Anonymous
+          </span>
+
+        </label>
+
+
+
+        <button
+          id="generalDonateButton"
+          class="general-button"
+          type="button"
+        >
+          Donate to SFL Baseball
+        </button>
+
+
+        <div
+          id="generalStatus"
+          class="general-status"
+        ></div>
+
+
+        <p class="general-note">
+
+          General donations support SFL Baseball directly
+          and do not purchase or reserve a baseball.
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+      <strong>
+        SFL BASEBALL
+      </strong>
+
+      <br />
+
+      Road to Cooperstown
+
+    </footer>
+
+
+
+    <script>
+
+      const generalDonationAmount =
+        document.getElementById(
+          "generalDonationAmount"
+        );
+
+
+      const generalDonorName =
+        document.getElementById(
+          "generalDonorName"
+        );
+
+
+      const generalAnonymous =
+        document.getElementById(
+          "generalAnonymous"
+        );
+
+
+      const generalDonateButton =
+        document.getElementById(
+          "generalDonateButton"
+        );
+
+
+      const generalStatus =
+        document.getElementById(
+          "generalStatus"
+        );
+
+
+      function showGeneralStatus(
+        message,
+        type
+      ) {
+
+        generalStatus.textContent =
+          message;
+
+
+        generalStatus.className =
+          "general-status " +
+          type;
+
+      }
+
+
+      generalAnonymous.addEventListener(
+        "change",
+        () => {
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            generalDonorName.value =
+              "";
+
+
+            generalDonorName.disabled =
+              true;
+
+
+            generalDonorName.placeholder =
+              "Anonymous donation";
+
+          } else {
+
+            generalDonorName.disabled =
+              false;
+
+
+            generalDonorName.placeholder =
+              "Example: The Smith Family";
+
+          }
+
+        }
+      );
+
+
+      generalDonateButton.addEventListener(
+        "click",
+        async () => {
+
+          const amount =
+            Number(
+              generalDonationAmount.value
+            );
+
+
+          let donorName;
+
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            donorName =
+              "Anonymous";
+
+          } else {
+
+            donorName =
+              generalDonorName
+                .value
+                .trim()
+                .replace(
+                  /\s+/g,
+                  " "
+                );
+
+
+            if (
+              !donorName
+            ) {
+
+              showGeneralStatus(
+                "Please enter a donor name or select Remain Anonymous.",
+                "error"
+              );
+
+
+              generalDonorName.focus();
+
+
+              return;
+
+            }
+
+          }
+
+
+          if (
+            !Number.isFinite(
+              amount
+            ) ||
+            amount < 1
+          ) {
+
+            showGeneralStatus(
+              "Please enter a donation amount of at least $1.",
+              "error"
+            );
+
+
+            generalDonationAmount.focus();
+
+
+            return;
+
+          }
+
+
+          generalDonateButton.disabled =
+            true;
+
+
+          generalDonateButton.textContent =
+            "Creating Checkout...";
+
+
+          showGeneralStatus(
+            "Preparing secure checkout...",
+            "success"
+          );
+
+
+          try {
+
+            const response =
+              await fetch(
+                "/api/create-general-donation",
+                {
+
+                  method:
+                    "POST",
+
+                  headers: {
+
+                    "Content-Type":
+                      "application/json"
+
+                  },
+
+                  body:
+                    JSON.stringify({
+
+                      amount,
+
+                      donorName,
+
+                      anonymous:
+                        generalAnonymous.checked
+
+                    })
+
+                }
+              );
+
+
+            const data =
+              await response.json();
+
+
+            if (
+              !response.ok
+            ) {
+
+              throw new Error(
+                data.error ||
+                "Unable to create donation checkout."
+              );
+
+            }
+
+
+            if (
+              !data.url
+            ) {
+
+              throw new Error(
+                "Checkout URL was not returned."
+              );
+
+            }
+
+
+            window.location.href =
+              data.url;
+
+
+          } catch (
+            error
+          ) {
+
+            console.error(
+              error
+            );
+
+
+            showGeneralStatus(
+              error.message ||
+              "General donation checkout is unavailable.",
+              "error"
+            );
+
+
+            generalDonateButton.disabled =
+              false;
+
+
+            generalDonateButton.textContent =
+              "Donate to SFL Baseball";
+
+          }
+
+        }
+      );
+
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "success"
+      ) {
+
+        showGeneralStatus(
+          "Thank you for supporting SFL Baseball!",
+          "success"
+        );
+
+
+        document
+          .querySelector(
+            ".general-donation"
+          )
+          ?.scrollIntoView(
+            {
+              behavior:
+                "smooth"
+            }
+          );
+
+      }
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "canceled"
+      ) {
+
+        showGeneralStatus(
+          "Donation checkout was canceled. No payment was made.",
+          "error"
+        );
+
+      }
+
+    </script>
+
+
+  </main>
+
+</body>
+
+</html>
