@@ -139,7 +139,7 @@ export async function onRequestGet({
             false,
 
           error:
-            "SFL Baseball team not found.",
+            "South Florida Industriales team not found.",
         },
         404
       );
