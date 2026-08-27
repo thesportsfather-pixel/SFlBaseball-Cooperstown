@@ -124,7 +124,7 @@ export async function onRequestGet({
         env,
 
         "teams" +
-        "?team_key=eq.sfl-baseball-cooperstown" +
+        "?team_key=eq.sfi-baseball-cooperstown" +
         "&select=id,team_key,team_name" +
         "&limit=1"
       );
