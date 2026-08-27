@@ -239,7 +239,7 @@ export async function onRequestPost({
             false,
 
           error:
-            "SFL Baseball team not found.",
+            "South Florida Industriales team not found.",
         },
         404
       );
