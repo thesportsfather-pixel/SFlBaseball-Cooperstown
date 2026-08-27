@@ -224,7 +224,7 @@ export async function onRequestPost({
         env,
 
         "teams" +
-        "?team_key=eq.sfl-baseball-cooperstown" +
+        "?team_key=eq.sfi-baseball-cooperstown" +
         "&select=id,team_key,team_name" +
         "&limit=1"
       );
@@ -498,7 +498,7 @@ export async function onRequestPost({
 
     params.set(
       "metadata[team_key]",
-      "sfl-baseball-cooperstown"
+      "sfi-baseball-cooperstown"
     );
 
 
