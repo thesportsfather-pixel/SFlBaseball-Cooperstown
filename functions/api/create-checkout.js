@@ -466,7 +466,7 @@ export async function onRequestPost({
 
     params.set(
       "line_items[0][price_data][product_data][name]",
-      `SFL Baseball - ${player.player_name}`
+      `South Florida Industriales - ${player.player_name}`
     );
 
 
