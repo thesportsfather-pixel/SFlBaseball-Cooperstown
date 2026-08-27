@@ -160,7 +160,7 @@ export async function onRequestPost({
 
     params.set(
       "line_items[0][price_data][product_data][name]",
-      "SFL Baseball - General Team Donation"
+      "South Florida Industriales - General Team Donation"
     );
 
 
