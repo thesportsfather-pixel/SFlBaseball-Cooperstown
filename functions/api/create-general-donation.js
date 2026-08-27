@@ -190,7 +190,7 @@ export async function onRequestPost({
 
     params.set(
       "metadata[team_key]",
-      "sfl-baseball-cooperstown"
+      "sfi-baseball-cooperstown"
     );
 
 
