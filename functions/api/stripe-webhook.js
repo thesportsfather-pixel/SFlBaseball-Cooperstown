@@ -448,7 +448,7 @@ export async function onRequestPost({
 
     if (
       metadata.team_key !==
-      "sfl-baseball-cooperstown"
+      "sfi-baseball-cooperstown"
     ) {
       return json({
         received:
